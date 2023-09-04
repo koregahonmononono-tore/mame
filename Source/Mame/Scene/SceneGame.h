@@ -21,6 +21,12 @@ public:
 
     void DrawDebug()    override;
 
+    void SwordRender(bool s[4]);
+
+private:
+    // imgui—p
+    int hSword = 0;
+
 private:
     enum class SPRITE
     {
@@ -28,6 +34,9 @@ private:
     };
 
 private:
+    std::unique_ptr<Sprite> samurai;
+    std::unique_ptr<Sprite> sword[4];
+
     std::unique_ptr<Sprite> sprite[10];
 
     std::unique_ptr<Sprite> numSprite;
